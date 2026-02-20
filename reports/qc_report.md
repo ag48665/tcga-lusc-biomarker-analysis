@@ -14,7 +14,6 @@
 
 ![](../figures/qc_library_sizes.png)
 
-
 ### PCA (top variable genes)
 
 ![](../figures/qc_pca.png)
