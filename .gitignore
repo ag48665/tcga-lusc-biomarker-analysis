@@ -1,1 +1,2 @@
-.Rproj.user/
+reports/*
+!reports/qc_report.md
