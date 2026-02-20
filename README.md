@@ -140,16 +140,24 @@ Main output:
 
 ## Reproducibility
 
-### Requirements
+All analyses can be reproduced from raw TCGA data using a single command in R:
 
-* R ≥ 4.3
-* DESeq2
-* TCGAbiolinks
-* ggplot2
-* pheatmap
-* clusterProfiler
-* survival
-* survminer
+```r
+source("run_analysis.R")
+```
+
+The pipeline automatically:
+
+* downloads TCGA-LUSC RNA-seq data
+* performs quality control
+* computes PCA
+* identifies differentially expressed genes
+* generates visualizations
+* performs Gene Ontology enrichment
+* runs survival analysis
+
+Software versions are recorded in `session_info.txt`.
+
 
 ### Run the analysis
 
