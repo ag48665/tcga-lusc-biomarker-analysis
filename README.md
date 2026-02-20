@@ -35,10 +35,10 @@ PCA shows separation between tumor and normal lung tissue, indicating strong glo
 
 Thousands of genes are significantly up- or down-regulated in tumor samples, consistent with large-scale transcriptional reprogramming in LUSC.
 
-### Heatmap: Tumor vs Normal Signature
-> Heatmap of a small gene set selected to best separate tumor vs normal samples (feature selection on VST expression).
+### Heatmap: Tumor vs Normal Gene Signature
+Heatmap of a selected gene set that best separates tumor and normal samples based on VST expression.
 
-![Heatmap](figures/heatmap_top30_sigVarGenes_NTvsTP_README.png)
+![Tumor vs Normal gene signature](figures/heatmap_lusc_signature.png)
 
 ---
 
