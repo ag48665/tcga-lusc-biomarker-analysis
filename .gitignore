@@ -1,28 +1,19 @@
-<<<<<<< HEAD
-reports/*
-!reports/qc_report.md
-=======
 # R / RStudio
-
+.Rproj.user/
 .Rhistory
 .RData
-.Rproj.user
+.RDataTmp
+.Ruserdata
 
 # Data (DO NOT UPLOAD)
-
 data/
 GDCdata/
-results/
-reports/
 
 # Large R objects
-
 *.rds
 *.Rds
 *.RDS
 
 # Temporary
-
 *.log
 *.tmp
->>>>>>> 4fde3c4 (Add local analysis results and QC report)
