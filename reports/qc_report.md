@@ -14,9 +14,6 @@
 
 ![](../figures/qc_library_sizes.png)
 
-### VST distribution
-
-![](../figures/qc_vst_density.png)
 
 ### PCA (top variable genes)
 
