@@ -16,4 +16,4 @@ GDCdata/
 
 # Temporary
 *.log
-*.tmp
+*.tmpresults/DE_genes_LUSC.csv results/ensembl_to_entrez_mapping.csv results/GO_enrichment.csv results/go_enrichment_BP.csv results/qc_library_sizes.csv results/qc_outlier_ranking.csv
