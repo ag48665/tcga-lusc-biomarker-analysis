@@ -25,14 +25,6 @@ Additionally, enrichment of immune-related pathways such as leukocyte mediated i
 
 Overall, RNA-seq data alone was sufficient to reconstruct both the histological identity of the tumor and the presence of tumor-immune interactions.
 
-## Quality control
-
-QC summary and plots are in `reports/qc_report.md`.
-
-Key QC visuals:
-- PCA (VST, top variable genes): `figures/qc_pca.png`
-- Sample–sample correlation heatmap: `figures/qc_sample_correlation.png`
-
 ## Results
 
 ### PCA: Tumor vs Normal
@@ -46,6 +38,14 @@ The PCA shows clear separation between tumor and normal lung tissue, indicating 
 Thousands of genes are significantly up- or down-regulated in tumor samples, consistent with large-scale transcriptional reprogramming in lung cancer.
 
 ---
+## Quality control
+
+QC summary and plots are in `reports/qc_report.md`.
+
+Key QC visuals:
+- PCA (VST, top variable genes): `figures/qc_pca.png`
+- Sample–sample correlation heatmap: `figures/qc_sample_correlation.png`
+
 
 ## Tools
 R, Bioconductor, TCGAbiolinks, DESeq2, ggplot2
