@@ -53,12 +53,19 @@ Enrichment of immune-associated pathways (e.g., **leukocyte-mediated immunity**,
 ---
 
 ## Quality Control
+
 QC summary and plots are in `reports/qc_report.md`.
 
 Key QC visuals:
-- PCA (VST, top variable genes): `figures/qc_pca.png`
-- Sample–sample correlation heatmap: `figures/qc_sample_correlation.png`
-- Library sizes: `figures/qc_library_sizes.png`
+
+### PCA (QC)
+![](figures/qc_pca.png)
+
+### Sample–sample correlation (QC)
+![](figures/qc_sample_correlation.png)
+
+### Library sizes (QC)
+![](figures/qc_library_sizes.png)
 
 ---
 
