@@ -15,6 +15,15 @@ The aim is to identify genes differentially expressed between tumor and normal l
 6. Visualization using volcano plot
 
 ---
+Biological interpretation
+
+Differential expression analysis followed by Gene Ontology enrichment revealed strong activation of epithelial differentiation and immune-related processes in TCGA-LUSC tumors.
+
+The most significant enriched terms included keratinization, epidermis development, and skin development, which are hallmark features of squamous cell carcinoma. This indicates that tumor cells undergo squamous differentiation and acquire transcriptional programs characteristic of stratified epithelium. Importantly, this molecular signal matches histopathological definitions of lung squamous cell carcinoma.
+
+Additionally, enrichment of immune-related pathways such as leukocyte mediated immunity, humoral immune response, chemotaxis, and cell recognition suggests substantial immune cell infiltration within the tumor microenvironment. This finding is consistent with the known immunogenicity of LUSC and helps explain the clinical responsiveness of these tumors to immune checkpoint inhibitors.
+
+Overall, RNA-seq data alone was sufficient to reconstruct both the histological identity of the tumor and the presence of tumor-immune interactions.
 
 ## Results
 
