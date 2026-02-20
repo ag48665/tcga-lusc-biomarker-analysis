@@ -7,45 +7,55 @@ library(survival)
 library(survminer)
 
 dir.create("figures", showWarnings = FALSE)
+dir.create("data", showWarnings = FALSE)
 
 # -----------------------------
-# Load data
+# Load expression (VST)
 # -----------------------------
 vsd <- readRDS("data/vsd_lusc_tp_nt.rds")
 expr <- assay(vsd)
 
-clinical <- GDCquery_clinic(project = "TCGA-LUSC", type = "clinical")
+# -----------------------------
+# Clinical cache (IMPORTANT: do this before merge)
+# -----------------------------
+CLIN_PATH <- "data/clinical_lusc.rds"
+
+if (file.exists(CLIN_PATH)) {
+  message("✓ Using cached clinical data: ", CLIN_PATH)
+  clinical <- readRDS(CLIN_PATH)
+} else {
+  message("Downloading clinical data from GDC (first run only)...")
+  clinical <- TCGAbiolinks::GDCquery_clinic(project = "TCGA-LUSC", type = "clinical")
+  saveRDS(clinical, CLIN_PATH)
+  message("✓ Saved clinical cache to: ", CLIN_PATH)
+}
 
 # -----------------------------
-# Choose gene (try TP53 first)
+# Choose gene
 # -----------------------------
-gene_symbol <- "TP53"   # you can change later, e.g. "MKI67", "CD274", "PDCD1"
+gene_symbol <- "KRT6A"
 
-# Helper: find gene row index by SYMBOL using rowData, fallback to DE results
+# Helper: find gene row index by SYMBOL using rowData
 find_gene_row <- function(vsd_obj, gene_sym) {
   rd <- rowData(vsd_obj)
-  
-  # Try common symbol columns in TCGA/Bioc objects
   possible_cols <- c("gene_name", "external_gene_name", "hgnc_symbol", "symbol", "gene")
-  hit_col <- intersect(possible_cols, colnames(rd))
+  hit_cols <- intersect(possible_cols, colnames(rd))
   
-  if (length(hit_col) > 0) {
-    for (col in hit_col) {
+  if (length(hit_cols) > 0) {
+    for (col in hit_cols) {
       vals <- as.character(rd[[col]])
       idx <- which(toupper(vals) == toupper(gene_sym))
       if (length(idx) > 0) return(idx[1])
     }
   }
-  
-  # If no symbol mapping exists, return NA
   return(NA_integer_)
 }
 
 gene_row <- find_gene_row(vsd, gene_symbol)
 
-# If TP53 not found by symbol, fallback to TOP DE gene from results file
+# If symbol not found, fallback to top DE feature
 if (is.na(gene_row)) {
-  message("TP53 not found as a gene symbol in rowData(vsd). Falling back to top DE gene...")
+  message(gene_symbol, " not found in rowData(vsd). Falling back to top DE feature...")
   
   de_path <- "results/DE_genes_LUSC.csv"
   if (!file.exists(de_path)) stop("Missing file: ", de_path, " (run 03_differential_expression.R first)")
@@ -57,7 +67,6 @@ if (is.na(gene_row)) {
   top_id <- rownames(de)[1]  # likely Ensembl ID
   message("Top DE feature ID: ", top_id)
   
-  # Find exact match in expression rownames (works if they are Ensembl IDs)
   gene_row <- which(rownames(expr) == top_id)[1]
   if (is.na(gene_row)) stop("Could not match top DE ID to expression matrix rownames.")
   
@@ -83,7 +92,9 @@ surv_df <- data.frame(
 # One patient may appear multiple times -> keep first
 surv_df <- surv_df[!duplicated(surv_df$submitter_id), ]
 
+# -----------------------------
 # Merge expression with clinical
+# -----------------------------
 if (!"submitter_id" %in% names(clinical)) {
   stop("Clinical table has no 'submitter_id'. Columns are: ", paste(names(clinical), collapse = ", "))
 }
@@ -91,7 +102,7 @@ if (!"submitter_id" %in% names(clinical)) {
 merged <- merge(clinical, surv_df, by = "submitter_id")
 
 # -----------------------------
-# Define groups: High vs Low expression
+# Define groups: High vs Low expression (median split)
 # -----------------------------
 median_expr <- median(merged$expression, na.rm = TRUE)
 merged$group <- ifelse(merged$expression > median_expr, "High", "Low")
@@ -120,7 +131,7 @@ if (!"vital_status" %in% names(merged)) {
 
 merged$status <- ifelse(tolower(merged$vital_status) %in% c("dead", "deceased"), 1, 0)
 
-# Filter usable survival rows
+# Filter usable rows
 merged <- merged[!is.na(merged$time) & merged$time > 0, ]
 
 # -----------------------------
@@ -131,9 +142,7 @@ cat("Patients after merge:", nrow(merged), "\n")
 cat("Events (dead):", sum(merged$status == 1, na.rm = TRUE), "\n")
 print(table(merged$group))
 
-if (nrow(merged) < 20) {
-  stop("Too few patients with survival info after filtering (n < 20).")
-}
+if (nrow(merged) < 20) stop("Too few patients with survival info after filtering (n < 20).")
 
 # -----------------------------
 # Kaplan–Meier
@@ -148,20 +157,8 @@ plt <- ggsurvplot(
   title = paste("TCGA-LUSC survival:", gene_label, "(High vs Low)")
 )
 
-out_file <- "figures/survival_gene.png"
-ggsave(out_file, plt$plot, width = 7, height = 5, dpi = 300)
+# Save BOTH plot + whole figure (plot only is usually enough for README)
+out_plot <- paste0("figures/survival_", gsub("[^A-Za-z0-9_\\-]", "_", gene_label), ".png")
+ggsave(out_plot, plt$plot, width = 7, height = 5, dpi = 300)
 
-cat("Saved plot:", out_file, "\n")
-
-# ---- Clinical cache ----
-CLIN_PATH <- "data/clinical_lusc.rds"
-
-if (file.exists(CLIN_PATH)) {
-  cat("✓ Using cached clinical data\n")
-  clinical <- readRDS(CLIN_PATH)
-} else {
-  cat("Downloading clinical data from GDC (first run only)...\n")
-  clinical <- TCGAbiolinks::GDCquery_clinic(project = "TCGA-LUSC", type = "clinical")
-  saveRDS(clinical, CLIN_PATH)
-  cat("✓ Saved clinical cache to: ", CLIN_PATH, "\n")
-}
+cat("Saved plot:", out_plot, "\n")
