@@ -15,7 +15,7 @@ The aim is to identify genes differentially expressed between tumor and normal l
 6. Visualization using volcano plot
 
 ---
-Biological interpretation
+## Biological interpretation
 
 Differential expression analysis followed by Gene Ontology enrichment revealed strong activation of epithelial differentiation and immune-related processes in TCGA-LUSC tumors.
 
