@@ -54,10 +54,13 @@ PCA demonstrates clear separation between tumor and normal lung samples, indicat
 
 ---
 ## Markdown
+
 ## Survival Analysis
 ![Survival](figures/survival_KRT6A.png)
 
 High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier, log-rank p-value shown).
+
+---
 
 ### Differential Gene Expression
 
