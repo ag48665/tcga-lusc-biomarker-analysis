@@ -10,11 +10,6 @@ This project performs a **reproducible bioinformatics analysis of TCGA-LUSC bulk
 The analysis compares **tumor (TP)** and **normal lung tissue (NT)** samples and links gene expression patterns to biological function and clinical relevance.
 
 ---
-##Markdown
-
-![Volcano plot](figures/volcano_lusc.png)
-
----
 ## Dataset
 
 Source: The Cancer Genome Atlas (TCGA)
