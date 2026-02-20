@@ -1,5 +1,9 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
+## Analysis Workflow
+
+![Workflow](figures/workflow.png)
+
 ## Project Overview
 
 Lung cancer is one of the leading causes of cancer mortality worldwide.
