@@ -27,8 +27,10 @@ Data were downloaded programmatically using the `TCGAbiolinks` R package.
 ---
 
 ## Analysis Workflow
-
 The analysis pipeline was implemented entirely in R and follows a standard cancer transcriptomics workflow:
+### Analysis Pipeline
+
+![Workflow](figures/workflow.png)
 
 1. Download RNA-seq counts from TCGA (TCGAbiolinks)
 2. Metadata filtering (Tumor vs Normal)
