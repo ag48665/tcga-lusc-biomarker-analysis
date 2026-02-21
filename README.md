@@ -122,6 +122,7 @@ Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE resul
 Run the entire pipeline from the project root:
 source("run_analysis.R")
 
+
 The pipeline automatically:
 
 downloads TCGA-LUSC RNA-seq data
