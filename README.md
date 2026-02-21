@@ -81,6 +81,8 @@ Thousands of genes are significantly differentially expressed (FDR-corrected), c
 ![Survival](figures/survival_KRT6A.png)
 
 High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier; log-rank p-value shown), suggesting potential prognostic relevance.
+---
+
 
 ### Prognostic Gene Signature
 
