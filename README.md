@@ -1,10 +1,10 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
-This project implements a fully reproducible bioinformatics pipeline for analysis of TCGA lung squamous cell carcinoma (LUSC) RNA-seq data.
+A fully reproducible cancer genomics workflow that analyzes TCGA lung squamous cell carcinoma RNA-seq data to identify tumor transcriptional programs and a prognostic gene expression signature.
 
-The workflow identifies tumor-specific transcriptional programs, performs functional interpretation, and evaluates the prognostic relevance of a multi-gene expression signature using Kaplan–Meier survival analysis and multivariate Cox regression.
+This project implements an end-to-end bioinformatics pipeline that downloads TCGA data, performs differential expression analysis (DESeq2), functional pathway enrichment (Gene Ontology and KEGG), and evaluates clinical relevance using Kaplan–Meier survival analysis and multivariate Cox regression.
 
-The analysis demonstrates that a transcriptome-derived gene signature is associated with overall survival in TCGA patients.
+The results demonstrate that transcriptome-derived gene expression patterns capture both tumor biology (squamous differentiation and immune activation) and clinically meaningful variation in overall survival among TCGA-LUSC patients.
 
 ---
 
