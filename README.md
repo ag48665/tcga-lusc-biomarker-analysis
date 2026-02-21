@@ -120,9 +120,8 @@ Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE resul
 ## Reproducibility
 
 Run the entire pipeline from the project root:
-
-```r
 source("run_analysis.R")
+
 The pipeline automatically:
 
 downloads TCGA-LUSC RNA-seq data
@@ -141,7 +140,8 @@ runs survival analysis
 
 Software versions are recorded in session_info.txt.
 
-Skills Demonstrated
+
+## Skills Demonstrated
 
 RNA-seq data analysis
 
@@ -159,7 +159,8 @@ reproducible research workflow design
 
 automated bioinformatics pipelines
 
-Author
+
+## Author
 
 Agata Gabara
 Bioinformatics / Computational Biology
