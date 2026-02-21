@@ -83,6 +83,8 @@ Thousands of genes are significantly differentially expressed (FDR-corrected), c
 
 KEGG pathway enrichment analysis highlighted immune- and microenvironment-related pathways (e.g., cytokine–cytokine receptor interaction, complement/coagulation, hematopoietic cell lineage, neutrophil extracellular trap formation) as well as extracellular matrix and adhesion pathways (ECM–receptor interaction, CAMs). Enrichment of cornified envelope formation supports the squamous epithelial differentiation program characteristic of LUSC.
 
+Full KEGG results: `results/KEGG_enrichment_results.csv`
+
 ---
 
 ## Functional Pathway Analysis (Gene Ontology)
