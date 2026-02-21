@@ -128,7 +128,7 @@ To assess whether the TCGA-derived signature generalizes beyond TCGA, we validat
 **Signature score / expression differences**  
 ![External validation boxplot](figures/GEO_signature_boxplot.png)
 
-Reproducible script: `reports/08_external_validation_GEO.R`
+Reproducible script: reports/08_external_validation_GEO.R
 ---
 
 ## External validation (GEO – GSE33479)
