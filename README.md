@@ -99,7 +99,7 @@ tumor–normal transcriptomic separation
 
 demonstrates that transcriptome-level analysis alone can recover canonical molecular features of LUSC.
 
-![Tumor Gene Signature Heatmap](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/heatmap_lusc_signature.png)
+![Tumor Gene Signature Heatmap](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/heatmap.png)
 
 The heatmap shows z-score scaled expression of the most variable significantly differentially expressed genes across selected tumor (TP) and normal (NT) samples.
 
