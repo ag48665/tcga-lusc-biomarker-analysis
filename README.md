@@ -116,7 +116,6 @@ The resulting candidate biomarker panel is provided here: results/top_LUSC_signa
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
 ---
----
 
 ## External validation (GEO – GSE33479)
 
