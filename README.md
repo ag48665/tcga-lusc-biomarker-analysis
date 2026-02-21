@@ -116,6 +116,36 @@ The resulting candidate biomarker panel is provided here: results/top_LUSC_signa
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
 ---
+---
+
+## External validation (GEO – GSE33479)
+
+To assess whether the TCGA-derived signature generalizes beyond TCGA, we validated it in an independent GEO microarray cohort (**GSE33479**).
+
+**PCA using signature genes**  
+![External validation PCA](figures/GEO_PCA_signature.png)
+
+**Signature score / expression differences**  
+![External validation boxplot](figures/GEO_signature_boxplot.png)
+
+Reproducible script: `reports/08_external_validation_GEO.R`
+---
+
+## External validation (GEO – GSE33479)
+
+To assess whether the TCGA-derived signature generalizes beyond TCGA, we validated it in an independent GEO microarray cohort (**GSE33479**).
+
+**PCA using signature genes**
+![External validation PCA](external_validation/figures/GEO_PCA_signature.png)
+
+**Signature score / expression differences**
+![External validation boxplot](external_validation/figures/GEO_signature_boxplot.png)
+
+Reproducible script: `reports/08_external_validation_GEO.R`
+
+
+
+---
 
 ## Functional Interpretation
 
