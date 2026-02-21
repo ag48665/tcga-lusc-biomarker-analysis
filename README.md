@@ -150,7 +150,7 @@ Software versions are recorded in session_info.txt.
 
 The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
 
-![Tumor Gene Signature](figures/heatmap_lusc_signature.png)
+![Tumor Gene Signature](figures/heatmap_lusc_signature.png) 
 
 This heatmap highlights a clear transcriptomic signature distinguishing LUSC tumors from normal lung tissue and supports the biological validity of the candidate biomarkers.
 ---
