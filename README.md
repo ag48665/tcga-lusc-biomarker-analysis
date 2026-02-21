@@ -108,13 +108,9 @@ The convergence of: Cancer-Testis Antigen activationepithelial differentiation p
 The heatmap shows z-score scaled expression of the most variable significantly differentially expressed genes across selected tumor (TP) and normal (NT) samples.
 
 Genes were selected using:
-adjusted p-value (FDR) < 0.05
-
-ranked by log2 fold-change
-
+adjusted p-value (FDR) < 0.05  ranked by log2 fold-change
 
 The resulting candidate biomarker panel is provided here: results/top_LUSC_signature_genes.csv
-
 
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
