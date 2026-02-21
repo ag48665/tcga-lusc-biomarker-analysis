@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "TCGA-LUSC RNA-seq Biomarker Discovery Pipeline"
+message: "If you use this workflow, please cite it as below."
+authors:
+
+* family-names: "Gabara"
+  given-names: "Agata"
+  date-released: 2026
+  version: 1.0
