@@ -144,19 +144,24 @@ Software versions are recorded in session_info.txt.
 ---
 
 ## Tumor Gene Signature
+---
+
+## Tumor Gene Signature
 
 The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
 
 ![Tumor Gene Signature](figures/heatmap_lusc_signature.png)
 
 This heatmap highlights a clear transcriptomic signature distinguishing LUSC tumors from normal lung tissue and supports the biological validity of the candidate biomarkers.
-To identify candidate biomarkers, the most significantly differentially expressed genes between tumor and normal lung tissue were selected and visualized as a heatmap.
+---
 
-The gene expression signature clearly separates tumor and normal samples, indicating a robust cancer-specific transcriptional program.
+## Tumor Gene Signature
 
-Many of the top genes are associated with epithelial differentiation and keratinization — hallmark biological processes of squamous cell carcinoma.
+The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
 
-This gene set represents a potential **diagnostic and prognostic biomarker panel** for LUSC and may serve as a starting point for future experimental validation.
+![Tumor Gene Signature](figures/heatmap_lusc_signature.png)
+
+This heatmap highlights a clear transcriptomic signature distinguishing LUSC tumors from normal lung tissue and supports the biological validity of the candidate biomarkers.
 
 
 ## Skills Demonstrated
