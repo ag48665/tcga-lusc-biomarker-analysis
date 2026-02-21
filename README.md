@@ -129,19 +129,6 @@ To assess whether the TCGA-derived signature generalizes beyond TCGA, we validat
 ![External validation boxplot](figures/GEO_signature_boxplot.png)
 
 Reproducible script: reports/08_external_validation_GEO.R
----
-
-## External validation (GEO – GSE33479)
-
-To assess whether the TCGA-derived signature generalizes beyond TCGA, we validated it in an independent GEO microarray cohort (**GSE33479**).
-
-**PCA using signature genes**
-![External validation PCA](external_validation/figures/GEO_PCA_signature.png)
-
-**Signature score / expression differences**
-![External validation boxplot](external_validation/figures/GEO_signature_boxplot.png)
-
-Reproducible script: `reports/08_external_validation_GEO.R`
 
 ---
 
