@@ -140,11 +140,18 @@ Software versions are recorded in session_info.txt.
 ---
 
 ## Tumor Gene Signature
+The most significantly upregulated genes in TCGA-LUSC tumors revealed a striking and biologically coherent pattern.
 
-The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
+Among the top differentially expressed genes, a large fraction belonged to the MAGE (Melanoma Antigen Gene) family, including MAGEA3, MAGEA4, MAGEA9, MAGEA10, MAGEA11, MAGEB1 and MAGEB2.
+These genes are classified as Cancer-Testis Antigens (CTAs) — a group of genes normally expressed only in germline tissues but aberrantly reactivated in tumors through epigenetic deregulation.
+
+The emergence of a strong Cancer-Testis Antigen signature directly from unsupervised differential expression analysis demonstrates that the pipeline captures real biological tumor programs rather than technical variation.
+
+In addition, epithelial differentiation markers (e.g., keratin family genes) were detected, consistent with the squamous histology of lung squamous cell carcinoma.
+
+Together, these results show that transcriptomic analysis alone is sufficient to recover the molecular identity of LUSC tumors.
 
 ![Tumor Gene Signature Heatmap](figures/heatmap_lusc_signature.png)
-
 
 This heatmap highlights a clear transcriptomic signature distinguishing LUSC tumors from normal lung tissue and supports the biological validity of the candidate biomarkers.
 
