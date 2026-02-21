@@ -87,7 +87,7 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 
 ### Prognostic Gene Signature
 
-![Signature KM](figures/signature_survival_groups.png)
+![Signature KM](https://github.com/ag48665/tcga-lusc-biomarker-analysis/blob/main/figures/signature_KM.png?raw=true)
 
 
 A multi-gene transcriptional signature derived from tumor vs normal differential expression significantly stratifies TCGA-LUSC patients into survival groups (Cox HR ≈ 0.75, p < 0.05).
