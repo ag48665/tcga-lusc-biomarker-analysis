@@ -24,7 +24,7 @@ This project performs a **reproducible transcriptomic analysis of TCGA-LUSC RNA-
 - identify genes differentially expressed between tumor and normal lung tissue
 - interpret affected biological pathways (Gene Ontology)
 - evaluate clinical relevance using survival analysis
-- propose candidate diagnostic / prognostic biomarkers
+- evaluate prognostic value of a tumor transcriptional signature using Kaplan–Meier and multivariate Cox regression
 
 The analysis compares **primary tumor samples (TP)** vs **normal tissue samples (NT)**.
 
