@@ -70,14 +70,6 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 
 ---
 
-## Tumor Gene Signature
-
-The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
-
-![Tumor Gene Signature Heatmap](figures/heatmap_lusc_signature.png)
-
----
-
 ## Functional Interpretation
 
 Gene Ontology enrichment highlights biological programs characteristic of squamous tumors:
