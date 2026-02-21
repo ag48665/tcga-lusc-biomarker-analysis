@@ -77,6 +77,40 @@ Principal Component Analysis shows clear separation between tumor and normal lun
 Thousands of genes are significantly differentially expressed (FDR-corrected), consistent with major molecular alterations in tumor tissue.
 
 ---
+## Functional Pathway Analysis (Gene Ontology)
+
+![GO enrichment](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/GO_BP_simplified.png)
+
+To interpret the biological meaning of the differentially expressed genes, Gene Ontology (GO) enrichment analysis was performed using the `clusterProfiler` package.
+
+The tumor gene set showed strong enrichment for epithelial and squamous differentiation processes, including:
+
+* epidermis development
+* keratinization
+* keratinocyte differentiation
+* epithelial cell differentiation
+
+These pathways are characteristic of lung squamous cell carcinoma histopathology and confirm that the transcriptomic analysis recovers the expected lineage program of airway basal epithelial cells.
+
+In addition, immune-related pathways were significantly enriched:
+
+* leukocyte-mediated immunity
+* chemotaxis
+* humoral immune response
+
+This suggests active tumor–immune microenvironment interactions in TCGA-LUSC tumors.
+
+Developmental programs such as cell fate commitment and pattern specification were also observed, consistent with aberrant differentiation and tumor progression.
+
+Together, these results demonstrate that the identified gene signature captures both tumor cell identity and immune microenvironment activity.
+
+The full enrichment results are provided in:
+
+`results/GO_enrichment_results.csv`
+
+
+
+---
 
 ### Survival Analysis (example gene)
 
