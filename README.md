@@ -1,24 +1,40 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
+A fully reproducible bioinformatics pipeline for identifying candidate biomarkers in lung cancer using TCGA bulk RNA-seq data.
+
+---
+
 ## Analysis Workflow
 
 ![Workflow](figures/workflow.png)
-## Project Overview
 
-Lung cancer is one of the leading causes of cancer mortality worldwide.
-Lung Squamous Cell Carcinoma (LUSC) is a major histological subtype characterized by extensive transcriptional reprogramming and strong tumor–immune interactions.
-
-This project performs a **reproducible bioinformatics analysis of TCGA-LUSC bulk RNA-seq data** to identify genes and biological processes associated with tumor development and potential diagnostic or prognostic biomarkers.
-
-The analysis compares **tumor (TP)** and **normal lung tissue (NT)** samples and links gene expression patterns to biological function and clinical relevance.
+The entire study can be reproduced from raw TCGA data using a single R command.  
+The pipeline automatically performs data download, preprocessing, statistical analysis, visualization, functional interpretation, and clinical survival analysis.
 
 ---
+
+## Project Overview
+
+Lung cancer is one of the leading causes of cancer mortality worldwide.  
+**Lung Squamous Cell Carcinoma (LUSC)** is a major histological subtype characterized by strong transcriptional dysregulation, epithelial differentiation, and tumor–immune interactions.
+
+The goal of this project is to perform a **reproducible transcriptomic analysis of TCGA-LUSC RNA-seq data** in order to:
+
+- identify genes differentially expressed between tumor and normal lung tissue
+- determine affected biological pathways
+- evaluate clinical relevance of selected genes
+- propose candidate diagnostic and prognostic biomarkers
+
+The analysis compares **primary tumor samples (TP)** with **normal tissue samples (NT)** and links gene expression to biological function and patient survival.
+
+---
+
 ## Dataset
 
-Source: The Cancer Genome Atlas (TCGA)
+Source: **The Cancer Genome Atlas (TCGA)**
 
 | Attribute      | Value                               |
-| -------------- | ----------------------------------- |
+|-------------- |------------------------------------|
 | Cohort         | TCGA-LUSC                           |
 | Data type      | Bulk RNA-seq gene expression counts |
 | Tumor samples  | 511                                 |
@@ -35,25 +51,23 @@ Data were downloaded programmatically using the `TCGAbiolinks` R package.
 
 ![PCA](figures/pca_lusc_tp_vs_nt.png)
 
-PCA demonstrates clear separation between tumor and normal lung samples, indicating widespread transcriptomic alterations in LUSC.
+Principal Component Analysis shows clear separation between tumor and normal lung samples, demonstrating widespread transcriptomic reprogramming in LUSC.
 
 ---
-
 
 ### Differential Gene Expression
 
 ![Volcano](figures/volcano_lusc.png)
 
-Thousands of genes are significantly differentially expressed (FDR-corrected), consistent with major molecular reprogramming in cancer tissue.
+Thousands of genes are significantly differentially expressed (FDR-corrected), indicating major molecular alterations associated with tumor development.
 
 ---
 
-## Markdown
+### Survival Analysis
 
-## Survival Analysis
 ![Survival](figures/survival_KRT6A.png)
 
-High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier, log-rank p-value shown).
+High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier analysis), suggesting clinical relevance and potential prognostic value.
 
 ---
 
@@ -61,36 +75,35 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 
 Gene Ontology enrichment revealed biological programs characteristic of squamous tumors:
 
-* keratinization
-* epidermis development
-* epithelial cell differentiation
-* immune activation pathways
+- keratinization
+- epidermis development
+- epithelial cell differentiation
+- immune activation pathways
 
-These findings align with the known histopathology of lung squamous cell carcinoma and indicate strong immune involvement in the tumor microenvironment.
+These findings are consistent with the known histopathology of squamous lung carcinoma and indicate strong epithelial and immune involvement in tumor biology.
 
 ---
 
-## Clinical Relevance
+## Tumor Gene Signature
 
-Survival analysis was performed to evaluate whether expression of selected genes is associated with patient outcome.
-Several tumor-associated genes showed differential survival patterns, suggesting potential **prognostic biomarker candidates**.
+![Tumor Gene Signature](figures/heatmap_lusc_signature.png)
+
+The heatmap highlights coordinated overexpression of epithelial and keratin-associated genes across tumor samples, supporting the existence of a stable transcriptional program characteristic of LUSC tumors.
 
 ---
 
 ## Quality Control
 
-Detailed QC report:
+Detailed QC report:  
 `reports/qc_report.md`
 
-Included checks:
+Quality checks performed:
 
-* library size distribution
-* PCA clustering
-* sample–sample correlation
+- library size distribution
+- PCA clustering
+- sample–sample correlation
 
-QC plots:
-
-**PCA (QC)**
+**QC PCA**
 ![](figures/qc_pca.png)
 
 **Sample correlation**
@@ -102,64 +115,3 @@ QC plots:
 ---
 
 ## Repository Structure
-
-```
-scripts/   → analysis scripts (R)
-figures/   → generated plots
-results/   → differential expression tables
-reports/   → QC report
-```
-
-Main output:
-`results/DE_genes_LUSC.csv`
-(FDR-corrected differential expression results)
-
----
-
-## Reproducibility
-
-All analyses can be reproduced from raw TCGA data using a single command in R:
-
-```r
-source("run_analysis.R")
-```
-
-The pipeline automatically:
-
-* downloads TCGA-LUSC RNA-seq data
-* performs quality control
-* computes PCA
-* identifies differentially expressed genes
-* generates visualizations
-* performs Gene Ontology enrichment
-* runs survival analysis
-
-Software versions are recorded in `session_info.txt`.
-
-
-### Run the analysis
-
-From the project root:
-
-```r
-source("run_analysis.R")
-```
-
-The pipeline will automatically download TCGA data and reproduce the analysis.
-
----
-
-## Skills Demonstrated
-
-This project demonstrates practical skills in:
-
-* RNA-seq data analysis
-* statistical modeling (DESeq2)
-* data visualization
-* cancer genomics
-* functional enrichment analysis
-* clinical survival analysis
-* reproducible research workflows
-
-  ## Author
-  Agata Gabara
