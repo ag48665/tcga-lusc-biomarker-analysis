@@ -120,6 +120,14 @@ results/DE_genes_LUSC.csv
 (FDR-corrected differential expression results)
 
 ---
+## Reproducibility
+The entire analysis can be reproduced from raw TCGA data using:
+
+```r
+source("run_analysis.R")
+---
+
+
 ## Skills Demonstrated
 
 This project demonstrates:
