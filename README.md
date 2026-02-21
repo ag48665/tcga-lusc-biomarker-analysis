@@ -128,43 +128,40 @@ The entire analysis can be reproduced from raw TCGA data using:
 ```r
 source("run_analysis.R")
 
----
 The pipeline automatically:
 
 downloads TCGA-LUSC RNA-seq data
+
 performs quality control
+
 computes PCA
+
 identifies differentially expressed genes
+
 generates figures
+
 performs Gene Ontology enrichment
+
 runs survival analysis
 
 Software versions are recorded in session_info.txt.
 
-
 ## Skills Demonstrated
 
 This project demonstrates:
-RNA-seq data analysis
-statistical modeling (DESeq2)
-cancer transcriptomics
-functional enrichment analysis
-Kaplan–Meier survival analysis
-data visualization in R
-reproducible research workflow design
-automated bioinformatics pipelines
 
+- RNA-seq data analysis
+- statistical modeling (DESeq2)
+- cancer transcriptomics
+- functional enrichment analysis
+- Kaplan–Meier survival analysis
+- data visualization in R
+- reproducible research workflow design
+- automated bioinformatics pipelines
+
+---
 
 ## Author
 
-Agata Gabara
+**Agata Gabara**  
 Bioinformatics / Computational Biology
-
-
-
-
-
-
-
-
-
