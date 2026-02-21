@@ -271,7 +271,7 @@ identifies differentially expressed genes
 
 generates figures
 
-performs Gene Ontology enrichment
+performs Gene Ontology enrichment and functional pathway interpretation
 
 runs survival analysis
 
