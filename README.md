@@ -140,21 +140,38 @@ Software versions are recorded in session_info.txt.
 ---
 
 ## Tumor Gene Signature
-The most significantly upregulated genes in TCGA-LUSC tumors revealed a striking and biologically coherent pattern.
+Differential expression analysis of TCGA-LUSC RNA-seq data identified a reproducible transcriptional program distinguishing tumor from normal lung tissue.
 
-Among the top differentially expressed genes, a large fraction belonged to the MAGE (Melanoma Antigen Gene) family, including MAGEA3, MAGEA4, MAGEA9, MAGEA10, MAGEA11, MAGEB1 and MAGEB2.
-These genes are classified as Cancer-Testis Antigens (CTAs) — a group of genes normally expressed only in germline tissues but aberrantly reactivated in tumors through epigenetic deregulation.
+A large proportion of the top upregulated genes belonged to the Cancer-Testis Antigen (CTA) family, including MAGEA3, MAGEA4, MAGEA9, MAGEA10, MAGEA11, MAGEB1, and MAGEB2.
+CTAs are normally restricted to germline tissues but become aberrantly activated in tumors due to epigenetic dysregulation and are well-known immunotherapy targets. Their recovery from an unbiased bulk RNA-seq analysis indicates that the computational pipeline captures biologically meaningful tumor signals.
 
-The emergence of a strong Cancer-Testis Antigen signature directly from unsupervised differential expression analysis demonstrates that the pipeline captures real biological tumor programs rather than technical variation.
+In parallel, multiple epithelial differentiation markers (keratinization and squamous lineage genes) were detected, consistent with the known histopathology of lung squamous cell carcinoma.
 
-In addition, epithelial differentiation markers (e.g., keratin family genes) were detected, consistent with the squamous histology of lung squamous cell carcinoma.
+The convergence of:
 
-Together, these results show that transcriptomic analysis alone is sufficient to recover the molecular identity of LUSC tumors.
+Cancer-Testis Antigen activation
+
+epithelial differentiation programs
+
+tumor–normal transcriptomic separation
+
+demonstrates that transcriptome-level analysis alone can recover canonical molecular features of LUSC.
 
 ![Tumor Gene Signature Heatmap](figures/heatmap_lusc_signature.png)
 
-This heatmap highlights a clear transcriptomic signature distinguishing LUSC tumors from normal lung tissue and supports the biological validity of the candidate biomarkers.
+The heatmap shows z-score scaled expression of the most variable significantly differentially expressed genes across selected tumor (TP) and normal (NT) samples.
 
+Genes were selected using:
+
+adjusted p-value (FDR) < 0.05
+
+ranked by log2 fold-change
+
+The resulting candidate biomarker panel is provided here:
+
+results/top_LUSC_signature_genes.csv
+
+This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
 ## Skills Demonstrated
 
