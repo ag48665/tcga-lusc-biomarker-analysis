@@ -112,9 +112,10 @@ figures/ → generated plots
 results/ → differential expression tables
 reports/ → QC report
 
-
+---
 Main result file:
 results/DE_genes_LUSC.csv
+---
 
 (FDR-corrected differential expression results)
 
@@ -127,7 +128,7 @@ The entire analysis can be reproduced from raw TCGA data using:
 ```r
 source("run_analysis.R")
 
-
+---
 The pipeline automatically:
 
 downloads TCGA-LUSC RNA-seq data
@@ -141,7 +142,7 @@ runs survival analysis
 Software versions are recorded in session_info.txt.
 
 
-Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates:
 RNA-seq data analysis
@@ -154,7 +155,7 @@ reproducible research workflow design
 automated bioinformatics pipelines
 
 
-Author
+## Author
 
 Agata Gabara
 Bioinformatics / Computational Biology
