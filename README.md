@@ -139,7 +139,7 @@ To assess whether the TCGA-derived signature generalizes beyond TCGA, we validat
 Reproducible script: reports/08_external_validation_GEO.R
 
 ---
-Prognostic Gene Signature (TCGA-LUSC)
+## Prognostic Gene Signature (TCGA-LUSC)
 
 To determine whether tumor transcriptional programs have clinical relevance, we constructed a multi-gene expression signature derived from significantly differentially expressed genes and evaluated its prognostic value in the TCGA-LUSC cohort.
 
