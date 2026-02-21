@@ -150,6 +150,8 @@ This indicates the gene signature functions as a prognostic biomarker in lung sq
 
 Importantly, the signature is derived solely from tumor vs normal transcriptomic differences, demonstrating that tumor-specific expression programs can predict patient outcomes.
 
+---
+
 ## Functional Interpretation
 
 Gene Ontology enrichment highlights biological programs characteristic of squamous tumors:
