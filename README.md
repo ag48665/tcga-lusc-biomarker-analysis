@@ -2,7 +2,9 @@
 
 ## Analysis Workflow
 
-![Workflow](figures/workflow.png)
+<p align="center">
+  <img src="figures/workflow.png" width="700">
+</p>
 ## Project Overview
 
 Lung cancer is one of the leading causes of cancer mortality worldwide.
