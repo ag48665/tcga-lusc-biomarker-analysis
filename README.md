@@ -120,28 +120,26 @@ results/DE_genes_LUSC.csv
 (FDR-corrected differential expression results)
 
 ---
+````md
 ## Reproducibility
-The entire analysis can be produced from raw TCGA data using:
+
+The entire analysis can be reproduced from raw TCGA data using:
+
 ```r
 source("run_analysis.R")
+```
 
 The pipeline automatically:
 
-downloads TCGA-LUSC RNA-seq data
+- downloads TCGA-LUSC RNA-seq data
+- performs quality control
+- computes PCA
+- identifies differentially expressed genes
+- generates figures
+- performs Gene Ontology enrichment
+- runs survival analysis
 
-performs quality control
-
-computes PCA
-
-identifies differentially expressed genes
-
-generates figures
-
-performs Gene Ontology enrichment
-
-runs survival analysis
-
-Software versions are recorded in session_info.txt
+Software versions are recorded in `session_info.txt`.
 ---
 
 ## Skills Demonstrated
