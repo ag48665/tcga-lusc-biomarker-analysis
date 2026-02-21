@@ -206,6 +206,16 @@ reproducible research workflow design
 
 automated bioinformatics pipelines
 
+---
+## Use the tumor signature on your own dataset
+
+You can compute the TCGA-LUSC signature score on any RNA-seq dataset:
+
+source("scripts/predict_signature_score.R")
+
+score <- predict_signature_score(expression_matrix, signature_genes)
+
+---
 
 ## Author
 
