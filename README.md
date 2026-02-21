@@ -265,27 +265,48 @@ QC plots:
 
 ## Reproducibility
 
-Run the entire pipeline from the project root:
+## Quick Start (Reproducibility)
+
+### Requirements
+
+* R ≥ 4.2
+* RStudio (recommended)
+* Internet connection (required for TCGA data download)
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ag48665/tcga-lusc-biomarker-analysis.git
+cd tcga-lusc-biomarker-analysis
+```
+
+Open the project in RStudio (File → Open Project → select the folder).
+
+### Run the analysis
+
+In the R console execute:
+
+```r
 source("run_analysis.R")
+```
 
+The pipeline will automatically:
 
-The pipeline automatically:
+* download TCGA-LUSC RNA-seq data using `TCGAbiolinks`
+* perform quality control
+* normalize expression data
+* compute PCA
+* identify differentially expressed genes (DESeq2)
+* perform Gene Ontology and KEGG pathway enrichment
+* build a prognostic gene expression signature
+* run Kaplan–Meier and Cox survival analyses
+* generate all figures in the `figures/` directory
 
-downloads TCGA-LUSC RNA-seq data
+Typical runtime: **~40–90 minutes** (first run; depends on internet speed).
 
-performs quality control
-
-computes PCA
-
-identifies differentially expressed genes
-
-generates figures
-
-performs Gene Ontology enrichment and functional pathway interpretation
-
-runs survival analysis
-
-Software versions are recorded in session_info.txt.
+Software versions are recorded in `session_info.txt`.
 
 ---
 
