@@ -21,10 +21,10 @@ Lung cancer is one of the leading causes of cancer-related mortality worldwide.
 
 This project performs a **reproducible transcriptomic analysis of TCGA-LUSC RNA-seq data** to:
 
-- identify genes differentially expressed between tumor and normal lung tissue
-- interpret affected biological pathways (Gene Ontology)
-- evaluate clinical relevance using survival analysis
-- evaluate prognostic value of a tumor transcriptional signature using Kaplan–Meier and multivariate Cox regression
+- identify differentially expressed genes between tumor and normal tissue
+- characterize biological pathways in LUSC
+- construct a transcriptome-derived prognostic gene signature
+- evaluate clinical relevance using multivariate survival modeling
 
 The analysis compares **primary tumor samples (TP)** vs **normal tissue samples (NT)**.
 
