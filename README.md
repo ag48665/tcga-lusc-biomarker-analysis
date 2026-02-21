@@ -101,22 +101,13 @@ CTAs are normally restricted to germline tissues but become aberrantly activated
 
 In parallel, multiple epithelial differentiation markers (keratinization and squamous lineage genes) were detected, consistent with the known histopathology of lung squamous cell carcinoma.
 
-The convergence of:
-
-Cancer-Testis Antigen activation
-
-epithelial differentiation programs
-
-tumor–normal transcriptomic separation
-
-demonstrates that transcriptome-level analysis alone can recover canonical molecular features of LUSC.
+The convergence of: Cancer-Testis Antigen activationepithelial differentiation programs, tumor–normal transcriptomic separation, demonstrates that transcriptome-level analysis alone can recover canonical molecular features of LUSC.
 
 ![Tumor Gene Signature Heatmap](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/heatmap.png)
 
 The heatmap shows z-score scaled expression of the most variable significantly differentially expressed genes across selected tumor (TP) and normal (NT) samples.
 
 Genes were selected using:
-
 adjusted p-value (FDR) < 0.05
 
 ranked by log2 fold-change
