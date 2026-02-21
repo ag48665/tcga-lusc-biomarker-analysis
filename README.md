@@ -1,6 +1,6 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
-A fully reproducible bioinformatics pipeline for identifying candidate biomarkers in lung cancer using TCGA bulk RNA-seq data.
+A fully reproducible bioinformatics pipeline for identifying candidate biomarkers in lung cancer using TCGA bulk RNA-seq data (tumor vs normal).
 
 ---
 
@@ -8,24 +8,23 @@ A fully reproducible bioinformatics pipeline for identifying candidate biomarker
 
 ![Workflow](figures/workflow.png)
 
-This study can be reproduced from raw TCGA data using a single R command (`source("run_analysis.R")`).
-The pipeline performs data download, preprocessing, statistical analysis, visualization, functional interpretation, and clinical survival analysis.
+This repository is designed so the entire analysis can be reproduced from raw TCGA data using a single R command.
 
 ---
 
 ## Project Overview
 
-Lung cancer is one of the leading causes of cancer mortality worldwide.  
-**Lung Squamous Cell Carcinoma (LUSC)** is a major histological subtype characterized by strong transcriptional dysregulation, epithelial differentiation, and tumor–immune interactions.
+Lung cancer is one of the leading causes of cancer-related mortality worldwide.  
+**Lung Squamous Cell Carcinoma (LUSC)** is a major histological subtype characterized by strong transcriptional dysregulation and tumor–immune interactions.
 
 This project performs a **reproducible transcriptomic analysis of TCGA-LUSC RNA-seq data** to:
 
 - identify genes differentially expressed between tumor and normal lung tissue
-- determine affected biological pathways (Gene Ontology)
-- evaluate clinical relevance of selected genes (Kaplan–Meier survival)
-- propose candidate diagnostic and prognostic biomarkers
+- interpret affected biological pathways (Gene Ontology)
+- evaluate clinical relevance using survival analysis
+- propose candidate diagnostic / prognostic biomarkers
 
-The analysis compares **primary tumor samples (TP)** with **normal tissue samples (NT)**.
+The analysis compares **primary tumor samples (TP)** vs **normal tissue samples (NT)**.
 
 ---
 
@@ -33,15 +32,15 @@ The analysis compares **primary tumor samples (TP)** with **normal tissue sample
 
 Source: **The Cancer Genome Atlas (TCGA)**
 
-| Attribute      | Value                               |
-|-------------- |------------------------------------|
-| Cohort         | TCGA-LUSC                           |
-| Data type      | Bulk RNA-seq gene expression counts |
-| Tumor samples  | 511                                 |
-| Normal samples | 51                                  |
-| Genes analyzed | ~60,000                             |
+| Attribute | Value |
+|---|---|
+| Cohort | TCGA-LUSC |
+| Data type | Bulk RNA-seq gene expression counts |
+| Tumor samples | 511 |
+| Normal samples | 51 |
+| Genes analyzed | ~60,000 |
 
-Data were downloaded programmatically using the `TCGAbiolinks` R package.
+Data are downloaded programmatically using the `TCGAbiolinks` R package.
 
 ---
 
@@ -59,28 +58,36 @@ Principal Component Analysis shows clear separation between tumor and normal lun
 
 ![Volcano](figures/volcano_lusc.png)
 
-Thousands of genes are significantly differentially expressed (FDR-corrected), consistent with major molecular alterations associated with tumor development.
+Thousands of genes are significantly differentially expressed (FDR-corrected), consistent with major molecular alterations in tumor tissue.
 
 ---
 
-### Survival Analysis (Kaplan–Meier)
+### Survival Analysis (example gene)
 
 ![Survival](figures/survival_KRT6A.png)
 
-High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (log-rank p-value shown), suggesting potential prognostic relevance.
+High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier; log-rank p-value shown), suggesting potential prognostic relevance.
+
+---
+
+## Tumor Gene Signature
+
+The most variable significantly differentially expressed genes were selected and visualized across tumor (TP) and normal (NT) samples (z-score scaled per gene).
+
+![Tumor Gene Signature Heatmap](figures/heatmap_lusc_signature.png)
 
 ---
 
 ## Functional Interpretation
 
-Gene Ontology enrichment revealed biological programs characteristic of squamous tumors:
+Gene Ontology enrichment highlights biological programs characteristic of squamous tumors:
 
 - keratinization
 - epidermis development
 - epithelial cell differentiation
 - immune activation pathways
 
-These findings align with the known histopathology of squamous lung carcinoma and indicate strong epithelial and immune involvement in tumor biology.
+These results align with known LUSC biology and tumor microenvironment involvement.
 
 ---
 
@@ -88,11 +95,7 @@ These findings align with the known histopathology of squamous lung carcinoma an
 
 Detailed QC report: `reports/qc_report.md`
 
-Quality checks performed:
-
-- library size distribution
-- PCA clustering
-- sample–sample correlation
+QC plots:
 
 **QC PCA**  
 ![](figures/qc_pca.png)
@@ -106,11 +109,13 @@ Quality checks performed:
 ---
 
 ## Repository Structure
-scripts/ → analysis scripts (R)
-figures/ → generated plots
-results/ → differential expression tables (optional / can be ignored if generated)
-reports/ → QC report
-run_analysis.R → one-command pipeline runner
+
+```text
+scripts/   -> analysis scripts (R)
+figures/   -> generated plots
+results/   -> result tables (e.g., DE genes)
+reports/   -> QC report (markdown)
+run_analysis.R -> one-command full pipeline
 
 
 Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE results)
