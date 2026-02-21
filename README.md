@@ -64,7 +64,7 @@ Thousands of genes are significantly differentially expressed (FDR-corrected), c
 
 ### Tumor Gene Signature
 
-![Heatmap](figures/heatmap_lusc_signature.png)
+![Workflow diagram](figures/workflow.png)
 
 A subset of highly variable genes strongly discriminates tumor from normal samples, suggesting potential diagnostic biomarkers.
 
