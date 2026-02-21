@@ -89,7 +89,9 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 
 ![Signature KM](figures/signature_survival_groups.png)
 
+
 A multi-gene transcriptional signature derived from tumor vs normal differential expression significantly stratifies TCGA-LUSC patients into survival groups (Cox HR ≈ 0.75, p < 0.05).
+
 ---
 ## Tumor Gene Signature
 Differential expression analysis of TCGA-LUSC RNA-seq data identified a reproducible transcriptional program distinguishing tumor from normal lung tissue.
