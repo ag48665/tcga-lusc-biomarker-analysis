@@ -1,8 +1,10 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
-A fully reproducible bioinformatics pipeline for discovery and validation of prognostic biomarkers in lung cancer using TCGA bulk RNA-seq data.
+This project implements a fully reproducible bioinformatics pipeline for analysis of TCGA lung squamous cell carcinoma (LUSC) RNA-seq data.
 
-The project identifies tumor-specific transcriptional programs in lung squamous cell carcinoma (LUSC) and demonstrates that a derived multi-gene expression signature predicts overall survival in TCGA patients.
+The workflow identifies tumor-specific transcriptional programs, performs functional interpretation, and evaluates the prognostic relevance of a multi-gene expression signature using Kaplan–Meier survival analysis and multivariate Cox regression.
+
+The analysis demonstrates that a transcriptome-derived gene signature is associated with overall survival in TCGA patients.
 
 ---
 
@@ -84,7 +86,6 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 
 ---
 
-
 ### Prognostic Gene Signature
 
 ![Signature KM](https://github.com/ag48665/tcga-lusc-biomarker-analysis/blob/main/figures/signature_KM.png?raw=true)
@@ -93,6 +94,7 @@ High expression of **KRT6A** stratifies TCGA-LUSC patients into different surviv
 A multi-gene transcriptional signature derived from tumor vs normal differential expression significantly stratifies TCGA-LUSC patients into survival groups (Cox HR ≈ 0.75, p < 0.05).
 
 ---
+
 ## Tumor Gene Signature
 Differential expression analysis of TCGA-LUSC RNA-seq data identified a reproducible transcriptional program distinguishing tumor from normal lung tissue.
 
@@ -140,6 +142,7 @@ In other words, two patients with the same clinical stage can still have differe
 
 This suggests potential application of the signature in **risk stratification** and patient prognosis assessment.
 
+
 ### Prognostic Transcriptomic Signature
 
 ![Signature survival](figures/signature_KM.png)
@@ -149,7 +152,6 @@ Patients stratified by the TCGA-derived gene expression signature show significa
 Importantly, the effect persists after adjustment for clinical covariates (age and pathological stage) in a multivariate Cox model, indicating that the signature captures independent biological risk.
 
 ---
-
 
 ## External validation (GEO – GSE33479)
 
