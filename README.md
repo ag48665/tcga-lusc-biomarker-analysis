@@ -110,7 +110,6 @@ QC plots:
 
 ## Repository Structure
 
-```text
 scripts/   -> analysis scripts (R)
 figures/   -> generated plots
 results/   -> result tables (e.g., DE genes)
@@ -146,9 +145,6 @@ runs survival analysis
 
 Software versions are recorded in session_info.txt.
 
----
-
-## Tumor Gene Signature
 ---
 
 ## Tumor Gene Signature
