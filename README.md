@@ -3,7 +3,7 @@
 ## Analysis Workflow
 
 <p align="center">
-  <img src="figures/workflow.png" width="600">
+  <img src="figures/workflow.png" width="900">
 </p>
 
 ## Project Overview
