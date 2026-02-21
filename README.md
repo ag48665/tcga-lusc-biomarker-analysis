@@ -125,7 +125,7 @@ To evaluate whether the transcriptomic signature provides clinical value beyond 
 - patient age
 - AJCC pathological stage
 
-![Multivariate Cox forest plot](figures/cox_forest.png)
+![Multivariate Cox forest plot](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/cox_forest_plot.png)
 
 The gene signature remained a significant predictor of overall survival after adjusting for clinical covariates.
 
