@@ -2,9 +2,8 @@
 
 ## Analysis Workflow
 
-## HTML
 <p align="center">
-  <img src="figures/workflow.png" width="700">
+  <img src="figures/workflow.png" width="300">
 </p>
 
 ## Project Overview
