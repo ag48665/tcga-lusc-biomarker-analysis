@@ -167,11 +167,12 @@ adjusted p-value (FDR) < 0.05
 
 ranked by log2 fold-change
 
-The resulting candidate biomarker panel is provided here:
 
-results/top_LUSC_signature_genes.csv
+The resulting candidate biomarker panel is provided here: results/top_LUSC_signature_genes.csv
+
 
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
+
 
 ## Skills Demonstrated
 
