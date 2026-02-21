@@ -115,7 +115,6 @@ The resulting candidate biomarker panel is provided here: results/top_LUSC_signa
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
 ---
----
 
 ## Prognostic Gene Signature (Multivariate Survival Model)
 
@@ -140,6 +139,14 @@ This indicates that the transcriptomic signal captured by RNA-seq contains progn
 In other words, two patients with the same clinical stage can still have different risk profiles based on tumor gene expression.
 
 This suggests potential application of the signature in **risk stratification** and patient prognosis assessment.
+
+### Prognostic Transcriptomic Signature
+
+![Signature survival](figures/signature_KM.png)
+
+Patients stratified by the TCGA-derived gene expression signature show significantly different overall survival.
+
+Importantly, the effect persists after adjustment for clinical covariates (age and pathological stage) in a multivariate Cox model, indicating that the signature captures independent biological risk.
 
 ---
 
