@@ -77,6 +77,14 @@ Principal Component Analysis shows clear separation between tumor and normal lun
 Thousands of genes are significantly differentially expressed (FDR-corrected), consistent with major molecular alterations in tumor tissue.
 
 ---
+## Pathway Analysis (KEGG)
+
+https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/KEGG_pathway_enrichment.png
+
+KEGG pathway enrichment analysis highlighted immune- and microenvironment-related pathways (e.g., cytokine–cytokine receptor interaction, complement/coagulation, hematopoietic cell lineage, neutrophil extracellular trap formation) as well as extracellular matrix and adhesion pathways (ECM–receptor interaction, CAMs). Enrichment of cornified envelope formation supports the squamous epithelial differentiation program characteristic of LUSC.
+
+---
+
 ## Functional Pathway Analysis (Gene Ontology)
 
 ![GO enrichment](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/GO_BP_simplified.png)
