@@ -143,8 +143,6 @@ To assess whether the TCGA-derived signature generalizes beyond TCGA, we validat
 
 Reproducible script: `reports/08_external_validation_GEO.R`
 
-
-
 ---
 
 ## Functional Interpretation
