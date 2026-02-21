@@ -128,6 +128,7 @@ The entire analysis can be reproduced from raw TCGA data using:
 ```r
 source("run_analysis.R")
 
+---
 The pipeline automatically:
 
 downloads TCGA-LUSC RNA-seq data
@@ -146,6 +147,7 @@ runs survival analysis
 
 Software versions are recorded in session_info.txt.
 
+---
 ## Skills Demonstrated
 
 This project demonstrates:
@@ -165,3 +167,5 @@ This project demonstrates:
 
 **Agata Gabara**  
 Bioinformatics / Computational Biology
+
+---
