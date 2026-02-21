@@ -43,6 +43,18 @@ Source: **The Cancer Genome Atlas (TCGA)**
 Data are downloaded programmatically using the `TCGAbiolinks` R package.
 
 ---
+## Repository Structure
+
+scripts/   -> analysis scripts (R)
+figures/   -> generated plots
+results/   -> result tables (e.g., DE genes)
+reports/   -> QC report (markdown)
+run_analysis.R -> one-command full pipeline
+
+
+Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE results)
+
+---
 
 ## Key Results
 
@@ -69,76 +81,6 @@ Thousands of genes are significantly differentially expressed (FDR-corrected), c
 High expression of **KRT6A** stratifies TCGA-LUSC patients into different survival groups (Kaplan–Meier; log-rank p-value shown), suggesting potential prognostic relevance.
 
 ---
-
-## Functional Interpretation
-
-Gene Ontology enrichment highlights biological programs characteristic of squamous tumors:
-
-- keratinization
-- epidermis development
-- epithelial cell differentiation
-- immune activation pathways
-
-These results align with known LUSC biology and tumor microenvironment involvement.
-
----
-
-## Quality Control
-
-Detailed QC report: `reports/qc_report.md`
-
-QC plots:
-
-**QC PCA**  
-![](figures/qc_pca.png)
-
-**Sample correlation**  
-![](figures/qc_sample_correlation.png)
-
-**Library sizes**  
-![](figures/qc_library_sizes.png)
-
----
-
-## Repository Structure
-
-scripts/   -> analysis scripts (R)
-figures/   -> generated plots
-results/   -> result tables (e.g., DE genes)
-reports/   -> QC report (markdown)
-run_analysis.R -> one-command full pipeline
-
-
-Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE results)
-
----
-
-## Reproducibility
-
-Run the entire pipeline from the project root:
-source("run_analysis.R")
-
-
-The pipeline automatically:
-
-downloads TCGA-LUSC RNA-seq data
-
-performs quality control
-
-computes PCA
-
-identifies differentially expressed genes
-
-generates figures
-
-performs Gene Ontology enrichment
-
-runs survival analysis
-
-Software versions are recorded in session_info.txt.
-
----
-
 ## Tumor Gene Signature
 Differential expression analysis of TCGA-LUSC RNA-seq data identified a reproducible transcriptional program distinguishing tumor from normal lung tissue.
 
@@ -173,6 +115,63 @@ The resulting candidate biomarker panel is provided here: results/top_LUSC_signa
 
 This gene set represents a candidate transcriptional signature capable of distinguishing LUSC tumors from normal lung tissue and provides potential targets for diagnostic and immunotherapeutic investigation.
 
+---
+
+## Functional Interpretation
+
+Gene Ontology enrichment highlights biological programs characteristic of squamous tumors:
+
+- keratinization
+- epidermis development
+- epithelial cell differentiation
+- immune activation pathways
+
+These results align with known LUSC biology and tumor microenvironment involvement.
+
+---
+
+## Quality Control
+
+Detailed QC report: `reports/qc_report.md`
+
+QC plots:
+
+**QC PCA**  
+![](figures/qc_pca.png)
+
+**Sample correlation**  
+![](figures/qc_sample_correlation.png)
+
+**Library sizes**  
+![](figures/qc_library_sizes.png)
+
+---
+
+## Reproducibility
+
+Run the entire pipeline from the project root:
+source("run_analysis.R")
+
+
+The pipeline automatically:
+
+downloads TCGA-LUSC RNA-seq data
+
+performs quality control
+
+computes PCA
+
+identifies differentially expressed genes
+
+generates figures
+
+performs Gene Ontology enrichment
+
+runs survival analysis
+
+Software versions are recorded in session_info.txt.
+
+---
 
 ## Skills Demonstrated
 
