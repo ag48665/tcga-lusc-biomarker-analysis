@@ -87,7 +87,7 @@ KEGG pathway enrichment analysis highlighted immune- and microenvironment-relate
 
 ## Functional Pathway Analysis (Gene Ontology)
 
-![GO enrichment](https://raw.githubusercontent.com/ag48665/tcga-lusc-biomarker-analysis/main/figures/GO_BP_simplified.png)
+![GO enrichment](figures/GO_BP_simplified.png)
 
 To interpret the biological meaning of the differentially expressed genes, Gene Ontology (GO) enrichment analysis was performed using the `clusterProfiler` package.
 
