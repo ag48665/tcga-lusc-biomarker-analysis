@@ -1,5 +1,8 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
 
+## Analysis Workflow
+
+![Workflow](figures/workflow.png)
 ## Project Overview
 
 Lung cancer is one of the leading causes of cancer mortality worldwide.
@@ -23,25 +26,6 @@ Source: The Cancer Genome Atlas (TCGA)
 | Genes analyzed | ~60,000                             |
 
 Data were downloaded programmatically using the `TCGAbiolinks` R package.
-
----
-
-## Analysis Workflow
-The analysis pipeline was implemented entirely in R and follows a standard cancer transcriptomics workflow:
-### Analysis Pipeline
-
-![Workflow](figures/workflow.png)
-
-1. Download RNA-seq counts from TCGA (TCGAbiolinks)
-2. Metadata filtering (Tumor vs Normal)
-3. Quality control and library size assessment
-4. Variance Stabilizing Transformation (DESeq2 VST)
-5. Principal Component Analysis (PCA)
-6. Differential Gene Expression (DESeq2)
-7. Multiple testing correction (FDR)
-8. Visualization (volcano plots & heatmaps)
-9. Functional enrichment analysis (Gene Ontology)
-10. Survival analysis for clinically relevant genes
 
 ---
 
@@ -176,3 +160,6 @@ This project demonstrates practical skills in:
 * functional enrichment analysis
 * clinical survival analysis
 * reproducible research workflows
+
+  ## Author
+  Agata Gabara
