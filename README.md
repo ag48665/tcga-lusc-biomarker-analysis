@@ -1,8 +1,10 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
+---
 Agata Gabara
 Independent Researcher
 Koluszki, Poland
 Email: agatagabara@gmail.com
+---
 
 A fully reproducible cancer genomics workflow that analyzes TCGA lung squamous cell carcinoma RNA-seq data to identify tumor transcriptional programs and a prognostic gene expression signature.
 
