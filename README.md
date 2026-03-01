@@ -1,4 +1,8 @@
 # TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Biomarker Discovery
+Agata Gabara
+Independent Researcher
+Koluszki, Poland
+Email: agatagabara@gmail.com
 
 A fully reproducible cancer genomics workflow that analyzes TCGA lung squamous cell carcinoma RNA-seq data to identify tumor transcriptional programs and a prognostic gene expression signature.
 
@@ -330,6 +334,20 @@ You can compute the TCGA-LUSC signature score on any RNA-seq dataset:
 source("scripts/predict_signature_score.R")
 
 score <- predict_signature_score(expression_matrix, signature_genes)
+
+---
+## Data Availability
+All data used in this study are publicly available from The Cancer Genome Atlas (TCGA) database via the Genomic Data Commons (GDC) portal. The data are de-identified and open access. No new human subjects were recruited and no ethical approval was required.
+
+---
+
+## Code Availability
+All analysis code and reproducible workflow are available at:
+https://github.com/ag48665/tcga-lusc-biomarker-analysis
+
+---
+## Conflict of Interest
+The author declares no competing interests.
 
 ---
 
