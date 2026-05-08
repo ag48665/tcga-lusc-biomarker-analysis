@@ -76,6 +76,45 @@ Main result file (if saved): `results/DE_genes_LUSC.csv` (FDR-corrected DE resul
 Principal Component Analysis shows clear separation between tumor and normal lung samples, indicating widespread transcriptomic reprogramming in LUSC.
 
 ---
+## Potential Clinical and Research Applications
+
+This project demonstrates how large-scale cancer transcriptomic data can be used to identify biologically meaningful tumor programs and clinically relevant gene expression signatures in lung squamous cell carcinoma (LUSC).
+
+Potential applications include:
+
+- **Cancer biomarker discovery**
+  - Identification of genes and transcriptional programs associated with tumor development, immune activity, and patient survival.
+
+- **Risk stratification**
+  - Transcriptomic signatures may help distinguish patients with different prognostic risk profiles beyond conventional clinical staging.
+
+- **Precision oncology research**
+  - Integration of RNA-seq expression patterns with clinical variables may support future personalized treatment approaches.
+
+- **Immunotherapy research**
+  - Detection of immune-related pathways and Cancer-Testis Antigen (CTA) activation may help identify biologically relevant targets for immune-based therapies.
+
+- **Clinical transcriptomics workflows**
+  - Demonstration of reproducible pipelines for RNA-seq analysis, differential expression, pathway enrichment, and survival modeling using publicly available TCGA datasets.
+
+- **Translational oncology**
+  - Exploration of how tumor gene expression programs relate to overall survival and tumor microenvironment biology.
+
+- **External biomarker validation**
+  - Independent GEO cohort validation demonstrates how transcriptomic signatures can be evaluated across multiple datasets for robustness and reproducibility.
+
+- **Research reproducibility**
+  - The fully automated workflow supports transparent and reproducible cancer genomics analyses from raw TCGA data to final clinical interpretation.
+
+This project also highlights how transcriptomic data can capture both:
+- intrinsic tumor biology (e.g., squamous differentiation programs),
+- and tumor–immune microenvironment interactions.
+
+Importantly, this project is intended for research and educational purposes only. The identified biomarkers and prognostic signatures are not clinically validated diagnostic tools and would require prospective validation before potential clinical implementation.
+
+---
+
+
 
 ### Differential Gene Expression
 
